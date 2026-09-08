@@ -1,0 +1,79 @@
+Windows Registry Editor Version 5.00
+
+; Pitch Black Theme with Gray Accent preset by AveYo
+; for Ctrl+Alt+Del, Logon, Taskbar, Start Menu, Action Center (10 & 11)
+; revised 2026.05.15
+
+[HKEY_CURRENT_USER\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\Accent]
+"AccentColorMenu"=dword:ff000000      ; Window borders and titlebar [black]
+"StartColorMenu"=dword:ff000000       ; Modals in UWP ex. Apply new refresh rate in 10 [black]
+"AccentPalette"=hex:\
+    b0,b2,b4,ff,\                     ; Accent hover
+    cc,ce,d0,ff,\                     ; Accent
+    00,00,00,ff,\                     ; Active Titlebar and border []
+    90,92,94,ff,\                     ; Settings icons
+    00,00,00,ff,\                     ; Start and Action Center background [black]
+    00,00,00,ff,\                     ; Taskbar front [black]
+    00,00,00,ff,\                     ; Taskbar background [black]
+    00,00,00,ff                       ; Unused
+
+[HKEY_USERS\.DEFAULT\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\Accent]
+"AccentColorMenu"=dword:ff000000      ; Window borders and titlebar [black]
+"StartColorMenu"=dword:ff000000       ; Modals in UWP ex. Apply new refresh rate in 10 [black]
+"AccentPalette"=hex:\
+    b0,b2,b4,ff,\                     ; Accent hover
+    cc,ce,d0,ff,\                     ; Accent
+    00,00,00,ff,\                     ; Active Titlebar and border []
+    90,92,94,ff,\                     ; Settings icons
+    00,00,00,ff,\                     ; Start and Action Center background [black]
+    00,00,00,ff,\                     ; Taskbar front [black]
+    00,00,00,ff,\                     ; Taskbar background [black]
+    00,00,00,ff                       ; Unused
+
+[HKEY_CURRENT_USER\Control Panel\Colors]
+"HotTrackingColor"="144 146 148" ; 170 ; 144 146 148
+"Hilight"="84 86 88"             ; 204 ; 74 76 78
+"MenuHilight"="204 206 208"      ; 100
+
+[HKEY_USERS\.DEFAULT\Control Panel\Colors]
+"HotTrackingColor"="144 146 148" ; 170 ; 144 146 148
+"Hilight"="84 86 88"             ; 204 ; 74 76 78
+"MenuHilight"="204 206 208"      ; 100
+
+[HKEY_CURRENT_USER\SOFTWARE\Microsoft\Windows\DWM]
+"ColorPrevalence"=dword:00000001     ; Show accent color on Title bars and window borders [x] - or titlebars_black.reg
+"AccentColor"=dword:ff000000          ; Active title bars - black unsupported in the UI but works with AccentPalette
+"AccentColorInactive"=dword:ff000000  ; Inactive title bars
+
+[HKEY_USERS\.DEFAULT\SOFTWARE\Microsoft\Windows\DWM]
+"ColorPrevalence"=dword:00000001     ; Show accent color on Title bars and window borders [x] - or titlebars_black.reg
+"AccentColor"=dword:ff000000          ; Active title bars - black unsupported in the UI but works with AccentPalette
+"AccentColorInactive"=dword:ff000000  ; Inactive title bars
+
+[HKEY_CURRENT_USER\SOFTWARE\Microsoft\Windows\CurrentVersion\Themes\Personalize]
+"ColorPrevalence"=dword:00000001      ; Show accent color on Start, taskbar and action center [x]
+"AppsUseLightTheme"=dword:00000000    ; Apps mode [Dark]
+"SystemUsesLightTheme"=dword:00000000 ; Windows mode [Dark]
+"EnabledBlurBehind"=dword:00000000    ; Blur []
+"EnableTransparency"=dword:00000000   ; Transparency []
+
+[HKEY_USERS\.DEFAULT\SOFTWARE\Microsoft\Windows\CurrentVersion\Themes\Personalize]
+"ColorPrevalence"=dword:00000001      ; Show accent color on Start, taskbar and action center [x]
+"AppsUseLightTheme"=dword:00000000    ; Apps mode [Dark]
+"SystemUsesLightTheme"=dword:00000000 ; Windows mode [Dark]
+"EnabledBlurBehind"=dword:00000000    ; Blur []
+"EnableTransparency"=dword:00000000   ; Transparency []
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Winlogon]
+"Background"="0 0 0"
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\System]
+"DisableAcrylicBackgroundOnLogon"=dword:00000001 ; AveYo: enable pure black logon on 11
+"DisableLogonBackgroundImage"=dword:00000001 ; remove logon picture - separate lockscreen_image.reg provided
+
+[HKEY_LOCAL_MACHINE\Software\Policies\Microsoft\Windows\Personalization]
+"PersonalColors_Background"="#000000" ; AveYo: this is what was missing to make Ctrl+Alt+Del background black as well
+"PersonalColors_Accent"="#000000"
+"NoLockScreen"=dword:00000001 ; remove lock screen - separate lockscreen_image.reg provided
+
+; done - log off and back on to see all changes
