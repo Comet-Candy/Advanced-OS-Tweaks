@@ -1,6 +1,6 @@
 Windows Registry Editor Version 5.00
 
-; Take_Ownership_Advanced_Context_Menu.reg by AveYo v2018-07-19
+; Take_Ownership_Advanced_Context_Menu.reg by AveYo 
 ; =================================================================================================================================
 ; GAIN ACCESS: Inherit from parent: YES, Owner = current user, Owner Rights = Modify
 ; GAIN EXCLUSIVE ACCESS: Inherit from parent: NO, Owner = current user, Owner Rights = FullControl
