@@ -1,0 +1,260 @@
+<?xml version="1.0"?>
+<!--
+
+ Optimized Open-Shell StartMenu Settings by AveYo v2022.01.30
+   import via Programs - Open-Shell - Open-Shell Menu Settings - Backup - Load from XML file..
+   links: https://pastebin.com/9atGBx6D or https://gist.github.com/AveYo/f2add193abfb2ddc5963e11273df083b
+   Windows 11 preview: https://i.imgur.com/pcGUhCm.png      Older config: https://i.imgur.com/tKkreIj.png
+
+ Does this still work under Windows 11?  
+   Yes, it does!  
+   - but won't alleviate the horrible taskbar changes
+   For the taskbar, I propose using RetroBar - https://github.com/dremin/RetroBar   
+   if you need a dark theme for it try ShittyDark v2 - https://github.com/dremin/RetroBar/issues/206
+   Both can coexist and work great in this proposed setup  
+
+ One column layout with custom menu:
+   -Frequent item 1-
+   - - - - - - - - -
+   -Frequent item 12-
+   [Apps]
+   [Programs]
+   [Files]= This PC + Desktop, Documents, Pictures, Videos, Music, Downloads
+   [Settings]= PC Settings + Reload Explorer, Enable Defender - Disable, Updates - Stop, Add/remove, Network connections, Control Panel
+   [Shut Down..]
+   -Search bar-
+
+ Controls:
+   LeftClick=Open-Shell Start, Shift+LeftClick or MidClick=Windows Start, RightClick=Win+X menu, Shift+RightClick=Open-Shell menu
+
+ Skin:
+   Smoked Glass 0%, Taskbar transparency 50%
+
+ Advanced settings adjusted for speed
+
+ Changed Enable Defender - Disable to work regardless of Tamper Protection
+
+-->
+<Settings component="StartMenu" version="4.4.169">
+	<MenuStyle value="Classic1"/>
+	<MiddleClick value="WindowsMenu"/>
+	<ShiftRight value="1"/>
+	<Documents value="Hide"/>
+	<UserFiles value="Hide"/>
+	<ControlPanelCategories value="1"/>
+	<Search value="0"/>
+	<Help value="0"/>
+	<Run value="0"/>
+	<MaxRecentPrograms value="12"/>
+	<RecentProgKeys value="HiddenDigits"/>
+	<StartScreenShortcut value="0"/>
+	<CheckWinUpdates value="0"/>
+	<MenuDelay value="100"/>
+	<SplitMenuDelay value="100"/>
+	<ScrollType value="Auto"/>
+	<SameSizeColumns value="0"/>
+	<ShowNextToTaskbar value="1"/>
+	<SearchBox value="Normal"/>
+	<AlignToWorkArea value="1"/>
+	<MainMenuAnimation value="None"/>
+	<SubMenuAnimation value="None"/>
+	<MainMenuScrollSpeed value="1"/>
+	<SubMenuScrollSpeed value="1"/>
+	<EnableGlass value="0"/>
+	<SkinC1 value="Smoked Glass"/>
+	<SkinVariationC1 value=""/>
+	<SkinOptionsC1>
+		<Line>CAPTION=0</Line>
+		<Line>USER_IMAGE=0</Line>
+		<Line>USER_NAME=0</Line>
+		<Line>CENTER_NAME=0</Line>
+		<Line>SMALL_ICONS=1</Line>
+		<Line>LARGE_FONT=1</Line>
+		<Line>DISABLE_MASK=0</Line>
+	</SkinOptionsC1>
+	<EnableStartButton value="1"/>
+	<StartButtonType value="AeroButton"/>
+	<StartButtonIcon value="%SystemRoot%\system32\shell32.dll, 35"/>
+	<StartButtonText value=""/>
+	<CustomTaskbar value="1"/>
+	<TaskbarLook value="Transparent"/>
+	<TaskbarOpacity value="50"/>
+	<SkipMetro value="1"/>
+	<OpenMouseMonitor value="1"/>
+	<MenuItems1>
+		<Line>Items=COLUMN_PADDING,AppsMenu,ProgramsMenu,COLUMN_BREAK,CustomItem,SettingsMenu,UndockItem,DisconnectItem,ShutdownBoxItem,SearchBoxItem</Line>
+		<Line>AppsMenu.Command=apps</Line>
+		<Line>AppsMenu.Label=$Menu.Apps</Line>
+		<Line>AppsMenu.Icon=twinui.dll, 9604</Line>
+		<Line>ProgramsMenu.Command=programs</Line>
+		<Line>ProgramsMenu.Label=$Menu.Programs</Line>
+		<Line>ProgramsMenu.Tip=$Menu.ProgramsTip</Line>
+		<Line>ProgramsMenu.Icon=twinui.dll, 11414</Line>
+		<Line>CustomItem.Items=CustomItem3,UserDocumentsItem2,UserPicturesItem2,CustomItem6,CustomItem7,CustomItem2,ComputerItem,UserFilesItem2,FavoritesItem,RecentDocumentsItem,SearchMenu</Line>
+		<Line>CustomItem.Command=explorer.exe shell:::{20D04FE0-3AEA-1069-A2D8-08002B30309D}</Line>
+		<Line>CustomItem.Label=$Search.CategoryFiles</Line>
+		<Line>CustomItem.Icon=twinui.dll, 9608</Line>
+		<Line>CustomItem.Settings=SPLIT</Line>
+		<Line>CustomItem3.Link=Main Desktop | ::{Desktop}</Line>
+		<Line>CustomItem3.Settings=NOEXPAND</Line>
+		<Line>UserDocumentsItem2.Command=user_documents</Line>
+		<Line>UserDocumentsItem2.Tip=$Menu.UserDocumentsTip</Line>
+		<Line>UserDocumentsItem2.Settings=NOEXPAND</Line>
+		<Line>UserPicturesItem2.Command=user_pictures</Line>
+		<Line>UserPicturesItem2.Tip=$Menu.UserPicturesTip</Line>
+		<Line>UserPicturesItem2.Settings=NOEXPAND</Line>
+		<Line>CustomItem6.Link=Videos | %USERPROFILE%\Videos</Line>
+		<Line>CustomItem6.Settings=NOEXPAND</Line>
+		<Line>CustomItem7.Link=Music | %USERPROFILE%\Music</Line>
+		<Line>CustomItem7.Settings=NOEXPAND</Line>
+		<Line>CustomItem2.Link=Downloads | %USERPROFILE%\Downloads</Line>
+		<Line>CustomItem2.Settings=NOEXPAND</Line>
+		<Line>ComputerItem.Command=computer</Line>
+		<Line>ComputerItem.Settings=NOEXPAND</Line>
+		<Line>UserFilesItem2.Command=user_files</Line>
+		<Line>UserFilesItem2.Tip=$Menu.UserFilesTip</Line>
+		<Line>FavoritesItem.Command=favorites</Line>
+		<Line>FavoritesItem.Label=$Menu.Favorites</Line>
+		<Line>FavoritesItem.Icon=imageres.dll,1024</Line>
+		<Line>RecentDocumentsItem.Items=UserFilesItem,UserDocumentsItem,UserPicturesItem</Line>
+		<Line>RecentDocumentsItem.Command=recent_documents</Line>
+		<Line>RecentDocumentsItem.Label=$Menu.Documents</Line>
+		<Line>RecentDocumentsItem.Icon=shell32.dll,327</Line>
+		<Line>RecentDocumentsItem.Settings=ITEMS_FIRST</Line>
+		<Line>UserFilesItem.Command=user_files</Line>
+		<Line>UserFilesItem.Tip=$Menu.UserFilesTip</Line>
+		<Line>UserDocumentsItem.Command=user_documents</Line>
+		<Line>UserDocumentsItem.Tip=$Menu.UserDocumentsTip</Line>
+		<Line>UserPicturesItem.Command=user_pictures</Line>
+		<Line>UserPicturesItem.Tip=$Menu.UserPicturesTip</Line>
+		<Line>SearchMenu.Items=SearchFilesItem,SearchPrinterItem,SearchComputersItem,SearchPeopleItem</Line>
+		<Line>SearchMenu.Command=search</Line>
+		<Line>SearchMenu.Label=$Menu.Search</Line>
+		<Line>SearchMenu.Icon=shell32.dll,323</Line>
+		<Line>SearchFilesItem.Command=search_files</Line>
+		<Line>SearchFilesItem.Label=$Menu.SearchFiles</Line>
+		<Line>SearchFilesItem.Tip=$Menu.SearchFilesTip</Line>
+		<Line>SearchFilesItem.Icon=shell32.dll,134</Line>
+		<Line>SearchPrinterItem.Command=search_printer</Line>
+		<Line>SearchPrinterItem.Label=$Menu.SearchPrinter</Line>
+		<Line>SearchPrinterItem.Tip=$Menu.SearchPrintersTip</Line>
+		<Line>SearchPrinterItem.Icon=shell32.dll,1006</Line>
+		<Line>SearchComputersItem.Command=search_computers</Line>
+		<Line>SearchComputersItem.Label=$Menu.SearchComputers</Line>
+		<Line>SearchComputersItem.Tip=$Menu.SearchComputersTip</Line>
+		<Line>SearchComputersItem.Icon=shell32.dll,135</Line>
+		<Line>SearchPeopleItem.Command=search_people</Line>
+		<Line>SearchPeopleItem.Label=$Menu.SearchPeople</Line>
+		<Line>SearchPeopleItem.Icon=shell32.dll,269</Line>
+		<Line>SettingsMenu.Items=CustomItem4,CustomItem5,CustomItem8,HelpItem,RunItem,SecurityItem,SEPARATOR,PCSettingsItem,ProgramsFeaturesItem,NetworkItem,ControlPanelItem</Line>
+		<Line>SettingsMenu.Command=ms-settings:</Line>
+		<Line>SettingsMenu.Label=$Menu.Settings</Line>
+		<Line>SettingsMenu.Icon=twinui.dll, 10203</Line>
+		<Line>SettingsMenu.Settings=TRACK_RECENT|SPLIT</Line>
+		<Line>CustomItem4.Command=cmd /c "taskkill /im explorer.exe /f &amp; taskkill /im sihost.exe"</Line>
+		<Line>CustomItem4.Label=Reload Explorer</Line>
+		<Line>CustomItem4.Icon=imageres.dll, 5346</Line>
+		<Line>CustomItem4.Settings=TRACK_RECENT</Line>
+		<Line>CustomItem5.Items=CustomItem10</Line>
+		<Line>CustomItem5.Command=powershell -win 1 -nop -c start -win 1 -verb runas powershell -args \"-nop -c &amp; {`n`n'Enable Defender';`n`n`$ts=New-Object -ComObject 'Schedule.Service'; `$ts.Connect(); `$act=New-ScheduledTaskAction -Execute powershell -Argument '-nop -c `$p1=''HKLM:\SOFTWARE\Policies\Microsoft\Windows Defender''; `$p2=''HKLM:\SOFTWARE\Microsoft\Windows Defender''; ni `$p1; ni `$p2; rp `$p1 DisableAntiSpyware -Force; rp `$p2 DisableAntiSpyware -Force; sc.exe config windefend depend= RpcSs; kill -Name MpCmdRun -Force; start (`$env:ProgramFiles+''\Windows Defender\MpCmdRun.exe'') -Arg ''-EnableService'''; `$Ave=Register-ScheduledTask -TaskName '~ti' -Action `$act -User 'NT SERVICE\TrustedInstaller' -Force; `$f=`$ts.GetFolder('\'); `$t=`$f.GetTask('~ti'); `$t.Stop(0); `$Yo=`$t.RunEx(`$null,2,0,`$null);`$f.DeleteTask('~ti',0)}\"</Line>
+		<Line>CustomItem5.Label=Enable Defender</Line>
+		<Line>CustomItem5.Icon=%SystemDrive%\Program Files\Windows Defender\EppManifest.dll, 114</Line>
+		<Line>CustomItem5.Settings=SPLIT</Line>
+		<Line>CustomItem10.Command=powershell -win 1 -nop -c start -win 1 -verb runas powershell -args \"-nop -c &amp; {`n`n'Disable Defender';`n`n`$ts=New-Object -ComObject 'Schedule.Service'; `$ts.Connect(); `$act=New-ScheduledTaskAction -Execute powershell -Argument '-win 1 -nop -c `$p1=''HKLM:\SOFTWARE\Policies\Microsoft\Windows Defender'';`$p2=''HKLM:\SOFTWARE\Microsoft\Windows Defender'';ni `$p1; ni `$p2; sp `$p1 DisableAntiSpyware 1 -Type Dword -Force; sp `$p2 DisableAntiSpyware 1 -Type Dword -Force; kill -Name MpCmdRun -Force -ea 0; start (`$env:ProgramFiles+''\Windows Defender\MpCmdRun.exe'') -Arg ''-DisableService''; sc.exe config windefend depend= RpcSs-TOGGLE;'; `$Ave=Register-ScheduledTask -TaskName '~ti' -Action `$act -User 'NT SERVICE\TrustedInstaller' -Force; `$f=`$ts.GetFolder('\'); `$t=`$f.GetTask('~ti'); `$t.Stop(0); `$Yo=`$t.RunEx(`$null,2,0,`$null);`$f.DeleteTask('~ti',0)}\"</Line>
+		<Line>CustomItem10.Label=Disable</Line>
+		<Line>CustomItem10.Icon=%SystemDrive%\Program Files\Windows Defender\EppManifest.dll, 115</Line>
+		<Line>CustomItem8.Items=CustomItem13</Line>
+		<Line>CustomItem8.Command=ms-settings:windowsupdate</Line>
+		<Line>CustomItem8.Label=Windows Update</Line>
+		<Line>CustomItem8.Icon=imageres.dll, 1401</Line>
+		<Line>CustomItem8.Settings=SPLIT</Line>
+		<Line>CustomItem13.Command=powershell -win 1 -nop -c start -win 1 -verb runas cmd -args \"/q`n`nStop Updates - once`n`n /d /x /k taskkill /im wuauclt.exe /im sihclient.exe /im usoclient.exe /im SetupHost.exe /im EOSNotify.exe /im MusNotification.exe /im MusNotifyIcon.exe /im Windows10UpgraderApp.exe /im Windows10Upgrade.exe /im WindowsUpdateBox.exe /im DFDWiz.exe /im WmiPrvSE.exe /im TiWorker.exe /im SystemSettings.exe /im WinStore.App.exe /t /f &amp;(for /f tokens^=^3 %W in ('sc queryex wuauserv ^| findstr PID') do if not %W.==0. taskkill /pid %W /t /f) &amp;net stop TrustedInstaller &amp;net stop wuauserv &amp;net stop bits &amp;net stop msiserver &amp;net stop cryptSvc &amp;rd /s/q %Windir%\system32\catroot2 &amp;rd /s/q %Windir%\SoftwareDistribution\"</Line>
+		<Line>CustomItem13.Label=Stop</Line>
+		<Line>CustomItem13.Icon=netcenter.dll, 28</Line>
+		<Line>HelpItem.Command=help</Line>
+		<Line>HelpItem.Label=$Menu.Help</Line>
+		<Line>HelpItem.Tip=$Menu.HelpTip</Line>
+		<Line>HelpItem.Icon=shell32.dll,324</Line>
+		<Line>RunItem.Command=run</Line>
+		<Line>RunItem.Label=$Menu.Run</Line>
+		<Line>RunItem.Tip=$Menu.RunTip</Line>
+		<Line>RunItem.Icon=shell32.dll,328</Line>
+		<Line>SecurityItem.Command=windows_security</Line>
+		<Line>SecurityItem.Label=$Menu.Security</Line>
+		<Line>SecurityItem.Tip=$Menu.SecurityTip</Line>
+		<Line>SecurityItem.Icon=shell32.dll,48</Line>
+		<Line>PCSettingsItem.Link=ms-settings:appsfeatures</Line>
+		<Line>PCSettingsItem.Label=Apps and features</Line>
+		<Line>PCSettingsItem.Tip=$Menu.FeaturesTip</Line>
+		<Line>PCSettingsItem.Icon=ieframe.dll, 31073</Line>
+		<Line>PCSettingsItem.Settings=TRACK_RECENT</Line>
+		<Line>ProgramsFeaturesItem.Command=programs_features</Line>
+		<Line>ProgramsFeaturesItem.Label=$Menu.Features</Line>
+		<Line>ProgramsFeaturesItem.Tip=$Menu.FeaturesTip</Line>
+		<Line>ProgramsFeaturesItem.Icon=imageres.dll, 5352</Line>
+		<Line>NetworkItem.Command=network_connections</Line>
+		<Line>NetworkItem.Label=$Menu.Network</Line>
+		<Line>NetworkItem.Tip=$Menu.NetworkTip</Line>
+		<Line>NetworkItem.Icon=shell32.dll,257</Line>
+		<Line>ControlPanelItem.Command=control_panel</Line>
+		<Line>ControlPanelItem.Label=$Menu.ControlPanel</Line>
+		<Line>ControlPanelItem.Tip=$Menu.ControlPanelTip</Line>
+		<Line>ControlPanelItem.Icon=shell32.dll,137</Line>
+		<Line>ControlPanelItem.Settings=TRACK_RECENT</Line>
+		<Line>UndockItem.Command=undock</Line>
+		<Line>UndockItem.Label=$Menu.Undock</Line>
+		<Line>UndockItem.Tip=$Menu.UndockTip</Line>
+		<Line>UndockItem.Icon=twinui.dll, 9606</Line>
+		<Line>DisconnectItem.Command=disconnect</Line>
+		<Line>DisconnectItem.Label=$Menu.Disconnect</Line>
+		<Line>DisconnectItem.Tip=$Menu.DisconnectTip</Line>
+		<Line>DisconnectItem.Icon=twinui.dll, 9602</Line>
+		<Line>ShutdownBoxItem.Items=LockItem,LogOffItem,SwitchUserItem,SEPARATOR,SleepItem,HibernateItem,SEPARATOR,RestartNUItem,RestartItem,ShutdownNUItem,ShutdownItem</Line>
+		<Line>ShutdownBoxItem.Command=shutdown_box</Line>
+		<Line>ShutdownBoxItem.Label=$Menu.ShutdownBox</Line>
+		<Line>ShutdownBoxItem.Icon=twinui.dll, 9611</Line>
+		<Line>ShutdownBoxItem.Settings=SPLIT</Line>
+		<Line>LockItem.Command=lock</Line>
+		<Line>LockItem.Label=$Menu.Lock</Line>
+		<Line>LockItem.Tip=$Menu.LockTip</Line>
+		<Line>LockItem.Icon=none</Line>
+		<Line>LogOffItem.Command=logoff</Line>
+		<Line>LogOffItem.Label=$Menu.Logoff</Line>
+		<Line>LogOffItem.Tip=$Menu.LogOffTip</Line>
+		<Line>LogOffItem.Icon=none</Line>
+		<Line>SwitchUserItem.Command=switch_user</Line>
+		<Line>SwitchUserItem.Label=$Menu.SwitchUser</Line>
+		<Line>SwitchUserItem.Tip=$Menu.SwitchUserTip</Line>
+		<Line>SwitchUserItem.Icon=none</Line>
+		<Line>SleepItem.Command=sleep</Line>
+		<Line>SleepItem.Label=$Menu.Sleep</Line>
+		<Line>SleepItem.Tip=$Menu.SleepTip</Line>
+		<Line>SleepItem.Icon=none</Line>
+		<Line>HibernateItem.Command=hibernate</Line>
+		<Line>HibernateItem.Label=$Menu.Hibernate</Line>
+		<Line>HibernateItem.Tip=$Menu.HibernateTip</Line>
+		<Line>HibernateItem.Icon=none</Line>
+		<Line>RestartNUItem.Command=restart_noupdate</Line>
+		<Line>RestartNUItem.Label=$Menu.Restart</Line>
+		<Line>RestartNUItem.Tip=$Menu.RestartTip</Line>
+		<Line>RestartNUItem.Icon=none</Line>
+		<Line>RestartItem.Command=restart</Line>
+		<Line>RestartItem.Label=$Menu.Restart</Line>
+		<Line>RestartItem.Tip=$Menu.RestartTip</Line>
+		<Line>RestartItem.Icon=none</Line>
+		<Line>ShutdownNUItem.Command=shutdown_noupdate</Line>
+		<Line>ShutdownNUItem.Label=$Menu.Shutdown</Line>
+		<Line>ShutdownNUItem.Tip=$Menu.ShutdownTip</Line>
+		<Line>ShutdownNUItem.Icon=none</Line>
+		<Line>ShutdownItem.Command=shutdown</Line>
+		<Line>ShutdownItem.Label=$Menu.Shutdown</Line>
+		<Line>ShutdownItem.Tip=$Menu.ShutdownTip</Line>
+		<Line>ShutdownItem.Icon=none</Line>
+		<Line>SearchBoxItem.Command=search_box</Line>
+		<Line>SearchBoxItem.Label=$Menu.SearchBox</Line>
+		<Line>SearchBoxItem.Icon=none</Line>
+		<Line>SearchBoxItem.Settings=OPEN_UP|TRACK_RECENT</Line>
+	</MenuItems1>
+	<CascadingMenu value="1"/>
+	<EnableExit value="0"/>
+</Settings>
