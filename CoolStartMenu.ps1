@@ -1,6 +1,6 @@
 #Requires -RunAsAdministrator
 
-Open-Shell: Import XML + Custom Button + Theme
+---Open-Shell Import XML + Custom Button + Theme ---
 
 # --- Step 1: Install / Reinstall Chocolatey ---
 $chocoInstalled = Get-Command choco -ErrorAction SilentlyContinue
