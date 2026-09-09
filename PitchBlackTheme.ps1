@@ -1,8 +1,4 @@
 #Requires -RunAsAdministrator
-<#
-.SYNOPSIS
-    Installs/reinstalls Chocolatey, then installs Open-Shell via choco.
-#>
 
 # --- Step 1: Install / Reinstall Chocolatey ---
 $chocoInstalled = Get-Command choco -ErrorAction SilentlyContinue
@@ -19,7 +15,7 @@ iex ((New-Object System.Net.WebClient).DownloadString('https://community.chocola
 
 Write-Host "[+] Chocolatey ready." -ForegroundColor Green
 
-# --- Step 2: Refresh PATH for current session ---
+# --- Step 2: Refresh PATH ---
 $env:Path = [System.Environment]::GetEnvironmentVariable("Path","Machine") + ";" + [System.Environment]::GetEnvironmentVariable("Path","User")
 
 # --- Step 3: Install Open-Shell ---
@@ -32,7 +28,7 @@ if ($LASTEXITCODE -eq 0) {
     Write-Host "[-] Open-Shell installation failed." -ForegroundColor Red
 }
 
-Write-Host "`nDone!" -ForegroundColor Green   
+Write-Host "`nDone!" -ForegroundColor Green    
 
 # ============================================
 # Open-Shell: Import XML + Custom Button + Theme
