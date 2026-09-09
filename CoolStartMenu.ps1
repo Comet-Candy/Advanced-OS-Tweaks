@@ -1,5 +1,7 @@
 #Requires -RunAsAdministrator
 
+Open-Shell: Import XML + Custom Button + Theme
+
 # --- Step 1: Install / Reinstall Chocolatey ---
 $chocoInstalled = Get-Command choco -ErrorAction SilentlyContinue
 
@@ -82,9 +84,6 @@ Set-ItemProperty -Path "HKCU:\Software\Microsoft\Windows\CurrentVersion\Explorer
 # Restart Explorer to apply
 Stop-Process -Name explorer -Force
 
-# ============================================
-# Open-Shell: Import XML + Custom Button + Theme
-# ============================================
 
 $dl = "$env:USERPROFILE\Downloads"
 $xmlPath = "$dl\openshell_settings.xml"
