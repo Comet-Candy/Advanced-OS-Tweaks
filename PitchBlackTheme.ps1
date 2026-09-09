@@ -41,4 +41,13 @@ Write-Host "Theme applied." -ForegroundColor Green
 # --- Reload Open-Shell ---
 Write-Host "Reloading..." -ForegroundColor Cyan
 Start-Process "C:\Program Files\Open-Shell\StartMenu.exe" -ArgumentList "-reloadsettings" -WindowStyle Hidden
-Write-Host "Done." -ForegroundColor Green   
+Write-Host "Done." -ForegroundColor Green
+
+# Remove Search box from taskbar
+Set-ItemProperty -Path "HKCU:\SOFTWARE\Microsoft\Windows\CurrentVersion\Search" -Name "SearchBoxTaskbarMode" -Value 0 -Type DWord -Force
+
+# Remove Task View button from taskbar
+Set-ItemProperty -Path "HKCU:\Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced" -Name "ShowTaskViewButton" -Value 0 -Type DWord -Force
+
+# Restart Explorer to apply
+Stop-Process -Name explorer -Force   
