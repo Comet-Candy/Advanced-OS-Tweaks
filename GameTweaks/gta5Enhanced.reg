@@ -1,0 +1,107 @@
+Windows Registry Editor Version 5.00
+
+; ====================================================================================
+; 1. IMAGE FILE EXECUTION OPTIONS (High Priority, IO, and Page Optimization)
+; ====================================================================================
+
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Image File Execution Options\GTA5_Enhanced.exe]
+"UseLargePages"=dword:00000001
+
+; GTA5_enhanced.exe - Native
+[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Image File Execution Options\GTA5_enhanced.exe\PerfOptions]
+"AuditLevel"=dword:00000000
+"CpuPriorityClass"=dword:00000006
+"IoPriority"=dword:00000006
+"PagePriority"=dword:00000006
+
+; GTA5_enhanced.exe - WOW64 32-bit Node
+[HKEY_LOCAL_MACHINE\SOFTWARE\WOW6432Node\Microsoft\Windows NT\CurrentVersion\Image File Execution Options\GTA5_enhanced.exe\PerfOptions]
+"AuditLevel"=dword:00000000
+"CpuPriorityClass"=dword:00000006
+"IoPriority"=dword:00000006
+"PagePriority"=dword:00000006
+
+; Launcher.exe (Rockstar Launcher)
+[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Image File Execution Options\Launcher.exe\PerfOptions]
+"CpuPriorityClass"=dword:00000006
+"IoPriority"=dword:00000003
+"PagePriority"=dword:00000005
+
+; PlayGTAV.exe (Base Executable)
+[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Image File Execution Options\PlayGTAV.exe\PerfOptions]
+"CpuPriorityClass"=dword:00000006
+"IoPriority"=dword:00000003
+"PagePriority"=dword:00000005
+
+; RockstarService.exe
+[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Image File Execution Options\RockstarService.exe\PerfOptions]
+"CpuPriorityClass"=dword:00000006
+"IoPriority"=dword:00000003
+"PagePriority"=dword:00000005
+
+; BEService_gta5.exe (BattlEye for GTA 5)
+[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Image File Execution Options\BEService.exe\PerfOptions]
+"CpuPriorityClass"=dword:00000006
+"IoPriority"=dword:00000003
+"PagePriority"=dword:00000005
+
+
+; ====================================================================================
+; 2. DIRECTX USER GPU PREFERENCES (Force High-Performance GPU)
+; ====================================================================================
+
+[HKEY_CURRENT_USER\Software\Microsoft\DirectX\UserGpuPreferences]
+"C:\\Program Files\\Rockstar Games\\Grand Theft Auto V Enhanced\\GTA5_enhanced.exe"="GpuPreference=2;"
+"C:\\Program Files\\Rockstar Games\\Grand Theft Auto V Enhanced\\PlayGTAV.exe"="GpuPreference=2;"
+"C:\\Program Files\\Rockstar Games\\Launcher\\Launcher.exe"="GpuPreference=2;"
+"C:\\Program Files\\Rockstar Games\\Launcher\\RockstarService.exe"="GpuPreference=2;"
+"C:\\Program Files\\Rockstar Games\Grand Theft Auto V Enhanced\\GTA5_Enhanced_BE.exe"="GpuPreference=2;"
+
+
+; ====================================================================================
+; 3. COMPATIBILITY FLAGS (High DPI Aware, Run As Admin, Disable Fullscreen Optimizations)
+; ====================================================================================
+
+; Local Machine Flags
+[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\AppCompatFlags\Layers]
+"C:\\Program Files\\Rockstar Games\\Grand Theft Auto V Enhanced\\GTA5_enhanced.exe"="~ HIGHDPIAWARE DISABLEDXMAXIMIZEDWINDOWEDMODE"
+"C:\\Program Files\\Rockstar Games\\Grand Theft Auto V Enhanced\\PlayGTAV.exe"="~ HIGHDPIAWARE RUNASADMIN DISABLEDXMAXIMIZEDWINDOWEDMODE"
+"C:\\Program Files\\Rockstar Games\\Launcher\\Launcher.exe"="~ HIGHDPIAWARE RUNASADMIN DISABLEDXMAXIMIZEDWINDOWEDMODE"
+"PreApproved"=""
+
+; Current User Flags
+[HKEY_CURRENT_USER\Software\Microsoft\Windows NT\CurrentVersion\AppCompatFlags\Layers]
+"C:\\Program Files\\Rockstar Games\\Grand Theft Auto V Enhanced\\GTA5_enhanced.exe"="~ HIGHDPIAWARE DISABLEDXMAXIMIZEDWINDOWEDMODE"
+"C:\\Program Files\\Rockstar Games\\Grand Theft Auto V Enhanced\\PlayGTAV.exe"="~ HIGHDPIAWARE RUNASADMIN DISABLEDXMAXIMIZEDWINDOWEDMODE"
+"C:\\Program Files\\Rockstar Games\\Launcher\\Launcher.exe"="~ HIGHDPIAWARE RUNASADMIN DISABLEDXMAXIMIZEDWINDOWEDMODE"
+"PreApproved"=""
+
+
+; ====================================================================================
+; 4. GAME CONFIG STORE (Disable Game DVR / Fullscreen Optimizations per App)
+; ====================================================================================
+
+[HKEY_CURRENT_USER\System\GameConfigStore\Applications\GTA5_enhanced.exe]
+"Flags"=dword:00000211
+
+[HKEY_CURRENT_USER\System\GameConfigStore\Applications\PlayGTAV.exe]
+"Flags"=dword:00000211
+
+
+; ====================================================================================
+; 5. QUALITY OF SERVICE (QoS) NETWORK PACKET PRIORITIZATION
+; ====================================================================================
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\QoS\gtav_enhanced]
+"Application Name"="GTA5_enhanced.exe"
+"DSCP Value"="46"
+"Local IP"="*"
+"Local IP Prefix Length"="*"
+"Local Port"="*"
+"Protocol"="*"
+"Remote IP"="*"
+"Remote IP Prefix Length"="*"
+"Remote Port"="*"
+"Throttle Rate"="-1"
+"Version"="1.0"

@@ -1,0 +1,69 @@
+Windows Registry Editor Version 5.00
+
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Image File Execution Options\Marvel-Win64-Shipping.exe]
+"UseLargePages"=dword:00000001
+
+; Marvel-Win64-Shipping.exe - Performance Options (Native)
+[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Image File Execution Options\Marvel-Win64-Shipping.exe\PerfOptions]
+"AuditLevel"=dword:00000000
+"CpuPriorityClass"=dword:00000006
+"IoPriority"=dword:00000006
+"PagePriority"=dword:00000006
+
+; Marvel-Win64-Shipping.exe - Performance Options (WOW64 32-bit Node)
+[HKEY_LOCAL_MACHINE\SOFTWARE\WOW6432Node\Microsoft\Windows NT\CurrentVersion\Image File Execution Options\Marvel-Win64-Shipping.exe\PerfOptions]
+"AuditLevel"=dword:00000000
+"CpuPriorityClass"=dword:00000006
+"IoPriority"=dword:00000006
+"PagePriority"=dword:00000006
+
+; MarvelRivals_Launcher.exe - Launcher Performance Options
+[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Image File Execution Options\MarvelRivals_Launcher.exe\PerfOptions]
+"CpuPriorityClass"=dword:00000006
+"IoPriority"=dword:00000003
+"PagePriority"=dword:00000005
+
+; Marvel.exe - Base Executable Performance Options
+[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Image File Execution Options\Marvel.exe\PerfOptions]
+"CpuPriorityClass"=dword:00000006
+"IoPriority"=dword:00000003
+"PagePriority"=dword:00000005
+
+[HKEY_CURRENT_USER\Software\Microsoft\DirectX\UserGpuPreferences]
+"C:\\Program Files (x86)\\Steam\\steamapps\\common\\MarvelRivals\\MarvelGame\\Marvel\\Binaries\\Win64\\Marvel-Win64-Shipping.exe"="GpuPreference=2;"
+"C:\\Program Files (x86)\\Steam\\steamapps\\common\\MarvelRivals\\MarvelGame\\Marvel.exe"="GpuPreference=2;"
+"C:\\Program Files (x86)\\Steam\\steamapps\\common\\MarvelRivals\\MarvelRivals_Launcher.exe"="GpuPreference=2;"
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\AppCompatFlags\Layers]
+"C:\\Program Files (x86)\\Steam\\steamapps\\common\\MarvelRivals\\MarvelGame\\Marvel\\Binaries\\Win64\\Marvel-Win64-Shipping.exe"="~ HIGHDPIAWARE RUNASADMIN DISABLEDXMAXIMIZEDWINDOWEDMODE"
+"C:\\Program Files (x86)\\Steam\\steamapps\\common\\MarvelRivals\\MarvelGame\\Marvel.exe"="~ HIGHDPIAWARE RUNASADMIN DISABLEDXMAXIMIZEDWINDOWEDMODE"
+"C:\\Program Files (x86)\\Steam\\steamapps\\common\\MarvelRivals\\MarvelRivals_Launcher.exe"="~ HIGHDPIAWARE RUNASADMIN DISABLEDXMAXIMIZEDWINDOWEDMODE"
+"PreApproved"=""
+
+[HKEY_CURRENT_USER\Software\Microsoft\Windows NT\CurrentVersion\AppCompatFlags\Layers]
+"C:\\Program Files (x86)\\Steam\\steamapps\\common\\MarvelRivals\\MarvelGame\\Marvel\\Binaries\\Win64\\Marvel-Win64-Shipping.exe"="~ HIGHDPIAWARE RUNASADMIN DISABLEDXMAXIMIZEDWINDOWEDMODE"
+"C:\\Program Files (x86)\\Steam\\steamapps\\common\\MarvelRivals\\MarvelGame\\Marvel.exe"="~ HIGHDPIAWARE RUNASADMIN DISABLEDXMAXIMIZEDWINDOWEDMODE"
+"C:\\Program Files (x86)\\Steam\\steamapps\\common\\MarvelRivals\\MarvelRivals_Launcher.exe"="~ HIGHDPIAWARE RUNASADMIN DISABLEDXMAXIMIZEDWINDOWEDMODE"
+"PreApproved"=""
+
+[HKEY_CURRENT_USER\System\GameConfigStore\Applications\Marvel-Win64-Shipping.exe]
+"Flags"=dword:00000211
+[HKEY_CURRENT_USER\System\GameConfigStore\Applications\Marvel.exe]
+"Flags"=dword:00000211
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\QoS\marvelrivals]
+"Application Name"="Marvel-Win64-Shipping.exe"
+"DSCP Value"="46"
+"Local IP"="*"
+"Local IP Prefix Length"="*"
+"Local Port"="*"
+"Protocol"="*"
+"Remote IP"="*"
+"Remote IP Prefix Length"="*"
+"Remote Port"="*"
+"Throttle Rate"="-1"
+"Version"="1.0"
+
+
+
