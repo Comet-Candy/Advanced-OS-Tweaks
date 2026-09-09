@@ -1,8 +1,11 @@
 #Requires -RunAsAdministrator
 
----Open-Shell Import XML + Custom Button + Theme ---
-
+# ============================================
+# Open-Shell: Import XML + Custom Button + Theme
+# ============================================
 # --- Step 1: Install / Reinstall Chocolatey ---
+
+
 $chocoInstalled = Get-Command choco -ErrorAction SilentlyContinue
 
 if ($chocoInstalled) {
@@ -32,9 +35,6 @@ if ($LASTEXITCODE -eq 0) {
 
 Write-Host "`nDone!" -ForegroundColor Green    
 
-# ============================================
-# Open-Shell: Import XML + Custom Button + Theme
-# ============================================
 
 $dl = "$env:USERPROFILE\Downloads"
 $xmlPath = "$dl\openshell_settings.xml"
