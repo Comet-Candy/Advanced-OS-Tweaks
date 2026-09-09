@@ -43,7 +43,7 @@ Write-Host "Downloading..." -ForegroundColor Cyan
 Invoke-WebRequest -Uri "https://raw.githubusercontent.com/Comet-Candy/Tweaks/main/CoolStartMenu/Classic-Shell_or_Open-Shell_StartMenu_optimized_settings.xml" -OutFile $xmlPath
 Invoke-WebRequest -Uri "https://raw.githubusercontent.com/Comet-Candy/Tweaks/main/CoolStartMenu/startbutton.png" -OutFile $btnPath
 Invoke-WebRequest -Uri "https://raw.githubusercontent.com/Comet-Candy/Tweaks/main/CoolStartMenu/.%20Pitch%20Black%20Theme.reg" -OutFile $regFile
-Write-Host "Downloaded." -ForegroundColor Green   
+Write-Host "Downloaded." -ForegroundColor Green     
 
 # --- Import XML (silent CMD) ---
 Write-Host "Importing XML..." -ForegroundColor Cyan
