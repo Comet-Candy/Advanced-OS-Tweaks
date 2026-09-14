@@ -14,3 +14,5 @@ if(Test-Path $bPath){
     Write-Host "[++] Launching optimized Brave..." -FC Green;Start-Process -FilePath $bPath -ArgumentList $args
 }else{Write-Host "[!] Error: Brave binary missing at $bPath" -FC Red}
 
+Pause
+
