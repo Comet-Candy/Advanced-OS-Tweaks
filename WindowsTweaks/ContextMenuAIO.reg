@@ -1,5 +1,12 @@
 ﻿Windows Registry Editor Version 5.00
 
+[HKEY_CLASSES_ROOT\*\shell\Open with Notepad]
+@="Open with Notepad"
+"Icon"="notepad.exe,0"
+
+[HKEY_CLASSES_ROOT\*\shell\Open with Notepad\command]
+@="notepad.exe \"%1\""   
+
 [HKEY_CLASSES_ROOT\*\shell\ResetNTFSPermissions]
 "MUIVerb"="Reset Permissions"
 "NoWorkingDirectory"=""
